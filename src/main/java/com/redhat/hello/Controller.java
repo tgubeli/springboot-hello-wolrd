@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controller {
     //@RequestMapping(value="/hello", method = RequestMethod.GET, produces = { "application/json" })
-    @GetMapping(path = "/", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping("/hello")
     public String hello() {
         return "{'greetings':'Hello world!'}";
     }
