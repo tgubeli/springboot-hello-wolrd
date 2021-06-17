@@ -1,1 +1,1 @@
-# springboot-hello-wolrd
+# A Simple SpringBoot Hello World REST service
