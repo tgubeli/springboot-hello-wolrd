@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.redhat.example</groupId>
-	<artifactId>springboot-kubernetes</artifactId>
+	<artifactId>springboot-helloworld</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot-kubernetes</name>
-	<description>Demo project for Spring Boot</description>
+	<name>springboot-helloworld</name>
+	<description>Simple SpringBoot REST service</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -46,31 +46,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>com.spotify</groupId>
-				<artifactId>dockerfile-maven-plugin</artifactId>
-				<version>1.4.0</version>
-				<configuration>
-					<!-- replace `callicoder` with your docker id-->
-					<username>hiashish</username>
-					<password>nokia@123</password>
-					<repository>hiashish/springboot-hello</repository>
-					<tag>${project.version}</tag>
-					<buildArgs>
-						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
-					</buildArgs>
-				</configuration>
-				<executions>
-					<execution>
-						<id>default</id>
-						<phase>install</phase>
-						<goals>
-							<goal>build</goal>
-							<goal>push</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
